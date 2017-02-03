@@ -6,16 +6,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var HomepageComponent = (function () {
-    function HomepageComponent() {
+var proposal_1 = require("./proposal");
+var ProposalNewComponent = (function () {
+    function ProposalNewComponent() {
+        this.proposal = new proposal_1.Proposal;
     }
-    return HomepageComponent;
+    return ProposalNewComponent;
 }());
-HomepageComponent = __decorate([
+ProposalNewComponent = __decorate([
     core_1.Component({
-        selector: 'main-app',
-        template: '<h1>Freelance Bootcamp Dashboard ! </h1>'
+        moduleId: module.id,
+        selector: 'proposal-new',
+        templateUrl: 'proposal-new.component.html'
     })
-], HomepageComponent);
-exports.HomepageComponent = HomepageComponent;
-//# sourceMappingURL=homepage.component.js.map
+], ProposalNewComponent);
+exports.ProposalNewComponent = ProposalNewComponent;
+//# sourceMappingURL=proposal-new.component.js.map
