@@ -12,17 +12,24 @@ var DocumentsComponent = (function () {
         this.documents = [
             {
                 title: "My First Doc",
-                description: 'asfgfhjjkggg',
+                description: 'react angular rails !',
                 file_url: 'http://google.com',
                 updated_at: '11/11/16',
-                image_url: 'http://google.com',
+                image_url: 'http://www.betatron.co/uploads/9/0/9/4/90942584/pic22.jpg',
             },
             {
                 title: "My Second Doc",
-                description: 'asfgfhjjkggg',
+                description: 'foobar foobar',
                 file_url: 'http://google.com',
                 updated_at: '11/11/16',
-                image_url: 'http://google.com',
+                image_url: 'http://www.betatron.co/uploads/9/0/9/4/90942584/pic22.jpg',
+            },
+            {
+                title: "My Third Doc",
+                description: 'hello world !',
+                file_url: 'http://google.com',
+                updated_at: '11/11/16',
+                image_url: 'http://www.betatron.co/uploads/9/0/9/4/90942584/pic22.jpg',
             },
         ];
     }
@@ -32,7 +39,8 @@ DocumentsComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'documents',
-        templateUrl: 'documents.component.html'
+        templateUrl: 'documents.component.html',
+        styleUrls: ['documents.component.css']
     })
 ], DocumentsComponent);
 exports.DocumentsComponent = DocumentsComponent;
