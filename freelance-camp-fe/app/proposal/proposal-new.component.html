@@ -35,7 +35,7 @@
                     <div class="form-group">
                         <label for="hourly_rate">Hourly rate</label>
                         <div class="input-group">
-                        <span class="input-group-addon">$</span>
+                            <span class="input-group-addon">$</span>
                             <input type="number" class="form-control" id="hourly_rate" required name="hourly_rate" #hourly_rate='ngModel' [(ngModel)]="proposal.hourly_rate">
                         </div>
                     </div>
@@ -53,6 +53,12 @@
                         <label for="client_email">Client email <em>(Optional)</em></label>
                         <input type="email" class="form-control" id="client_email" name="client_email" #client_email='ngModel' [(ngModel)]="proposal.client_email">
                     </div>
+                    <button type="submit" class="btn btn-outline-primary btn-lg" 
+                            [disabled]="!proposalForm.form.valid"
+                            [hidden]="submitted"
+                    >
+                        Generate Proposal
+                    </button>
                 </form>
             </div>
         </div>

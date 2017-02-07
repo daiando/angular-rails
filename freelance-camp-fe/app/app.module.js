@@ -17,6 +17,7 @@ var document_service_1 = require("./documents/document.service");
 var proposal_list_component_1 = require("./proposal/proposal-list.component");
 var proposal_new_component_1 = require("./proposal/proposal-new.component");
 var proposal_show_component_1 = require("./proposal/proposal-show.component");
+var proposal_service_1 = require("./proposal/proposal.service");
 var app_routing_module_1 = require("./app-routing.module");
 var AppModule = (function () {
     function AppModule() {
@@ -41,7 +42,8 @@ AppModule = __decorate([
             proposal_show_component_1.ProposalShowComponent
         ],
         providers: [
-            document_service_1.DocumentService
+            document_service_1.DocumentService,
+            proposal_service_1.ProposalService
         ],
         bootstrap: [
             app_component_1.AppComponent

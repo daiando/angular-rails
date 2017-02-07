@@ -1,18 +1,12 @@
-# -- public id?: number,
-# -- public customer?: string,
-# -- public portfolio_url: string = 'http://',
-# -- public tools?: string,
-# -- public estimated_hours?: number,
-# -- public hourly_rate?: number,
-# -- public weeks_to_complete?: number,
-# -- public client_email?: string,
 
-Proposal.create!(
-  customer?: string,
-  portfolio_url: string = 'http://',
-  tools?: string,
-  estimated_hours?: number,
-  hourly_rate?: number,
-  weeks_to_complete?: number,
-  client_email?: string,
-)
+10.times do |proposal|
+  Proposal.create!(
+    customer: "Customer #{proposal}",
+    portfolio_url: 'http://portfolio.jourdanhudgens.com',
+    tools: 'Ruby on Rails, Angular2, postgresql',
+    estimated_hours: (80 + proposal),
+    hourly_rate: 120,
+    weeks_to_complete: 12,
+    client_email: 'jordan@devcamp.com'
+  )
+end
