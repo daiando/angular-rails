@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs/Rx';
 
 import { Proposal } from './proposal';
 
@@ -26,8 +26,7 @@ export class ProposalService {
   createProposal(proposal) {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
-    return this.http.post(this.proposalsUrl, JSON.stringify(proposal), {
-      headers: headers }).map((res: Response)) => res.json())
+    return this.http.post(this.proposalsUrl, JSON.stringify(proposal), { headers: headers }).map((res: Response) => res.json());
   }
 
   private handleError (error: Response | any) {

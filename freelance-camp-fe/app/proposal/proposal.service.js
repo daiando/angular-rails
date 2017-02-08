@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
-var Observable_1 = require("rxjs/Observable");
+var Rx_1 = require("rxjs/Rx");
 var ProposalService = (function () {
     function ProposalService(http) {
         this.http = http;
@@ -27,10 +27,7 @@ var ProposalService = (function () {
     ProposalService.prototype.createProposal = function (proposal) {
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
-        return this.http.post(this.proposalsUrl, JSON.stringify(proposal), {
-            headers: headers
-        }).map(function (res) { return ; });
-        res.json();
+        return this.http.post(this.proposalsUrl, JSON.stringify(proposal), { headers: headers }).map(function (res) { return res.json(); });
     };
     ProposalService.prototype.handleError = function (error) {
         // In a real world app, we might use a remote logging infrastructure
@@ -44,7 +41,7 @@ var ProposalService = (function () {
             errMsg = error.message ? error.message : error.toString();
         }
         console.error(errMsg);
-        return Observable_1.Observable.throw(errMsg);
+        return Rx_1.Observable.throw(errMsg);
     };
     return ProposalService;
 }());
